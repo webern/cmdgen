@@ -36,6 +36,7 @@
       <option name="SPACE_BEFORE_REFERENCE_IN_DECLARATION" value="false" />
       <option name="SPACE_AFTER_REFERENCE_IN_DECLARATION" value="true" />
       <option name="SPACE_BETWEEN_ADJACENT_BRACKETS" value="true" />
+      <option name="INSERT_VIRTUAL_WITH_OVERRIDE" value="true" />
       <option name="NAMESPACES_NAMING_CONVENTION">
         <value prefix="" style="SNAKE_CASE" suffix="" />
       </option>
@@ -51,23 +52,11 @@
       <option name="UNIONS_NAMING_CONVENTION">
         <value prefix="" style="PASCAL_CASE" suffix="" />
       </option>
-      <option name="METHODS_NAMING_CONVENTION">
-        <value prefix="" style="SNAKE_CASE" suffix="" />
-      </option>
       <option name="FIELDS_NAMING_CONVENTION">
-        <value prefix="" style="SNAKE_CASE" suffix="" />
-      </option>
-      <option name="GLOBAL_FUNCTIONS_NAMING_CONVENTION">
-        <value prefix="" style="SNAKE_CASE" suffix="" />
+        <value prefix="my" style="CAMEL_CASE" suffix="" />
       </option>
       <option name="GLOBAL_VARIABLES_NAMING_CONVENTION">
-        <value prefix="" style="SNAKE_CASE" suffix="" />
-      </option>
-      <option name="PARAMETERS_NAMING_CONVENTION">
-        <value prefix="" style="SNAKE_CASE" suffix="" />
-      </option>
-      <option name="LOCAL_VARIABLES_NAMING_CONVENTION">
-        <value prefix="" style="SNAKE_CASE" suffix="" />
+        <value prefix="" style="SCREAMING_SNAKE_CASE" suffix="" />
       </option>
     </Objective-C>
     <codeStyleSettings language="ObjectiveC">
@@ -75,11 +64,10 @@
       <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="1" />
       <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
       <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="1" />
-      <option name="BLANK_LINES_BEFORE_IMPORTS" value="0" />
-      <option name="BLANK_LINES_AFTER_IMPORTS" value="0" />
-      <option name="BLANK_LINES_AROUND_CLASS" value="0" />
-      <option name="BLANK_LINES_AROUND_METHOD" value="0" />
+      <option name="BLANK_LINES_AROUND_FIELD" value="1" />
+      <option name="BLANK_LINES_AROUND_METHOD" value="2" />
       <option name="BLANK_LINES_AROUND_METHOD_IN_INTERFACE" value="0" />
+      <option name="BLANK_LINES_AFTER_CLASS_HEADER" value="1" />
       <option name="BRACE_STYLE" value="2" />
       <option name="CLASS_BRACE_STYLE" value="2" />
       <option name="ELSE_ON_NEW_LINE" value="true" />
