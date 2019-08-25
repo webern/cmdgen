@@ -2,8 +2,8 @@
 
 #pragma once
 
-#include "Command.h"
-#include "CommandsOrArgs.h"
+#include "cppcmd/Command.h"
+#include "cppcmd/CommandsOrArgs.h"
 #include <string>
 #include <vector>
 
@@ -14,14 +14,16 @@ namespace cppcmd
     public:
         RawArgs( int argc, char** argv );
         explicit RawArgs( std::vector<std::string> inArgs );
+        ~RawArgs();
 
-        [[nodiscard]] std::vector<std::string> getArgs() const;
+        [[nodiscard]] const std::vector<std::string>& getArgs() const;
         [[nodiscard]] int getArgC() const;
-        char** getArgV();
+        [[nodiscard]] char** getArgV() const; // caution: do not mutate
 
     private:
         int myArgC;
         char** myArgV;
+        bool myIsArgVOwned;
         std::vector<std::string> myArgs;
     };
 }

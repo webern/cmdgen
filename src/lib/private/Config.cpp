@@ -1,6 +1,6 @@
 // cppcmd (c) MatthewJamesBriggs
 
-#include "Config.h"
+#include "cppcmd/Config.h"
 
 namespace cppcmd
 {

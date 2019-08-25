@@ -1,6 +1,6 @@
 // cppcmd (c) MatthewJamesBriggs
 
-#include "Command.h"
+#include "cppcmd/Command.h"
 
 namespace cppcmd
 {

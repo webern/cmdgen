@@ -4,8 +4,8 @@
 
 #include <string>
 #include <vector>
-#include "Command.h"
-#include "ArgSpecification.h"
+#include "cppcmd/Command.h"
+#include "cppcmd/ArgSpecification.h"
 
 namespace cppcmd
 {

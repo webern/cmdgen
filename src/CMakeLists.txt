@@ -44,6 +44,8 @@ if (${CPPCMD_ENABLE_TESTS})
     target_link_libraries(cppcmd_test cppcmd)
     target_include_directories(cppcmd_test PRIVATE ${DIR_CPPCMD_INCLUDE})
     target_include_directories(cppcmd_test PRIVATE ${DIR_CPPCMD_SOURCES})
+    target_include_directories(cppcmd_test PRIVATE ${DIR_EXAMPLE_SOURCES})
+    target_include_directories(cppcmd_test PRIVATE ${DIR_EXAMPLE_INCLUDE})
     add_test(NAME cppcmd_test COMMAND cppcmd_test)
 endif ()
 

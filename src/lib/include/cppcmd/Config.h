@@ -2,8 +2,8 @@
 
 #pragma once
 
-#include "Command.h"
-#include "CommandsOrArgs.h"
+#include "cppcmd/Command.h"
+#include "cppcmd/CommandsOrArgs.h"
 #include <string>
 #include <vector>
 

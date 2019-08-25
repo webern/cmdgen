@@ -1,5 +1,5 @@
 
-#include "ArgSpecification.h"
+#include "cppcmd/ArgSpecification.h"
 
 namespace cppcmd
 {
