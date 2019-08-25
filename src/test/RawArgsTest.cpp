@@ -45,7 +45,7 @@ namespace cppcmd
         CHECK( "WORLD" == std::string{ argv[2] } );
         CHECK( input == rawArgs->getArgs() );
         CHECK( inputArgV == argv );
-        rawArgs.release();
+        rawArgs = nullptr;
         CHECK( rawArgs == nullptr );
         CHECK( inputArgV != nullptr );
     }
