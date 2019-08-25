@@ -8,6 +8,6 @@
 
 namespace cppcmd
 {
-    ParsedArgs
-    parse( const Config& inConfig, const RawArgs& inRawArgs )
+    const ParsedArgs
+    parse( const Config& inConfig, const RawArgs& inRawArgs );
 }
