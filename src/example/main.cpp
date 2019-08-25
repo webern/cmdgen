@@ -2,6 +2,9 @@
 
 #include <iostream>
 
-int main(int argc, char *argv[]) {
-  std::cout << "cppcmd main" << std::endl;
+
+int
+main( int argc, char*argv[] )
+{
+    std::cout << "cppcmd main" << std::endl;
 }
