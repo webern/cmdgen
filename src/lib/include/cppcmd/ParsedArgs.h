@@ -9,6 +9,6 @@ namespace cppcmd
     public:
 
     private:
-        
+
     };
 }
