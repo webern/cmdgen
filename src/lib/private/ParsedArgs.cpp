@@ -42,6 +42,49 @@ namespace cppcmd
     }
 
 
+    void
+    ParsedArgs::addError( Error inError )
+    {
+        myErrors.emplace_back( std::move( inError ) );
+    }
+
+
+    const Errors&
+    ParsedArgs::getErrors() const
+    {
+        return myErrors;
+    }
+
+
+    bool
+    ParsedArgs::getIsError() const
+    {
+        return !myErrors.empty();
+    }
+
+
+    bool
+    ParsedArgs::getIsHelp() const
+    {
+        const auto& val = getArgVal( "help" );
+        return val.getIsPresent();
+    }
+
+
+    const std::string&
+    ParsedArgs::getArgZero() const
+    {
+        return myArgZero;
+    }
+
+
+    void
+    ParsedArgs::setArgZero( std::string inArgZero )
+    {
+        myArgZero = std::move( inArgZero );
+    }
+
+
     ParsedArgs::ArgMap
     ParsedArgs::createArgMap( const ArgSpecifications& inArgSpecifications )
     {
@@ -54,4 +97,5 @@ namespace cppcmd
 
         return argMap;
     }
+
 }

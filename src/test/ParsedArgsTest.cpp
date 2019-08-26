@@ -5,14 +5,41 @@
 
 namespace cppcmd
 {
-    const bool REQUIRED = true;
-    const bool NOT_REQUIRED = false;
-    const bool FLAG = true;
-    const bool NOT_FLAG = false;
+    const bool IS_FLAG = true;
+    const bool IS_NOT_FLAG = false;
 
-    const ArgSpecification ARG_SPEC_A{ REQUIRED, NOT_FLAG, "hello", 'h', "The hello message." };
-    const ArgSpecification ARG_SPEC_B{ NOT_REQUIRED, FLAG, "angry", 'a', "Run program in anger mode." };
-    const ArgSpecification ARG_SPEC_C( REQUIRED, NOT_FLAG, "hungry", 'u', "Run program in hunger mode." );
+    const ArgSpecification ARG_SPEC_A(
+            0,
+            2,
+            IS_NOT_FLAG,
+            "hello",
+            'h',
+            "The hello message."
+    );
+
+    const ArgSpecification ARG_SPEC_B(
+            0,
+            1,
+            IS_FLAG,
+            "angry",
+            'a',
+            "Run program in anger mode."
+    );
+
+    const ArgSpecification ARG_SPEC_C(
+            "hungry",
+            'u',
+            "Run program in hunger mode."
+    );
+
+    const ArgSpecification ARG_SPEC_D(
+            1,
+            0,
+            IS_NOT_FLAG,
+            "many-things",
+            'm',
+            "Many things can go here, at least one is required."
+    );
 
     TEST_CASE( "ParsedArgs 1" )
     {
@@ -44,6 +71,11 @@ namespace cppcmd
         CHECK( str2 == parsedArgs.getArgVal( ARG_SPEC_A.getFullName() ).getAllValues().at( 1 ) );
         CHECK_FALSE( parsedArgs.getIsPresent( ARG_SPEC_B.getFullName() ) );
         CHECK_FALSE( parsedArgs.getIsPresent( ARG_SPEC_C.getFullName() ) );
+
+        auto val3 = parsedArgs.getArgVal( ARG_SPEC_A.getFullName() );
+        const std::string str3{ "xx" };
+        parsedArgs.setArgVal( val3.addVal( str2 ) );
+
     }
 
 }
