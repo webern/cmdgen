@@ -5,7 +5,6 @@
 #include <string>
 #include <vector>
 #include "cppcmd/Command.h"
-#include "cppcmd/ArgSpecification.h"
 
 namespace cppcmd
 {
@@ -13,23 +12,35 @@ namespace cppcmd
     {
     public:
         ArgSpecification(
-                bool inIsRequired,
+                int inMinCount,
+                int inMaxCount,
                 bool inIsFlag,
                 std::string inFullName,
                 char inShortName,
                 std::string inDescription
         );
 
+        ArgSpecification(
+                std::string inFullName,
+                char inShortName,
+                std::string inDescription
+        );
+
+        ArgSpecification();
+
     public:
         [[nodiscard]] bool getIsRequired() const;
+        [[nodiscard]] int getMinCount() const;
+        [[nodiscard]] int getMaxCount() const;
         [[nodiscard]] bool getIsFlag() const;
         [[nodiscard]] const std::string& getFullName() const;
         [[nodiscard]] char getShortName() const;
         [[nodiscard]] const std::string& getDescription() const;
 
     private:
+        const int myMinCount;
+        const int myMaxCount;
         const bool myIsFlag;
-        const bool myIsRequired;
         const std::string myFullName;
         const char myShortName;
         const std::string myDescription;

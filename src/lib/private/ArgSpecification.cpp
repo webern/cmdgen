@@ -1,34 +1,72 @@
 
 #include "cppcmd/ArgSpecification.h"
 
+#include <utility>
+
 namespace cppcmd
 {
     cppcmd::ArgSpecification::ArgSpecification(
-            bool inIsRequired,
+            int inMinCount,
+            int inMaxCount,
             bool inIsFlag,
             std::string inFullName,
             char inShortName,
             std::string inDescription
     )
-            : myIsRequired{ inIsRequired },
+            : myMinCount{ std::max( inMinCount, 0 ) },
+              myMaxCount{ std::max( inMaxCount, 0 ) },
               myIsFlag{ inIsFlag },
               myFullName{ std::move( inFullName ) },
               myShortName{ inShortName },
               myDescription{ std::move( inDescription ) }
     {
-        if( myIsFlag && myIsRequired )
+        if( myIsFlag && ( myMinCount != 0 || myMaxCount != 1 ) )
         {
             throw std::runtime_error{
-                    "It doesn't make sense for an argument to be both a flag and required (always true)."
+                    "A flag should have min count 0 and max count 1."
             };
         }
+    }
+
+
+    ArgSpecification::ArgSpecification( std::string inFullName, char inShortName, std::string inDescription )
+            : ArgSpecification{
+            0,
+            0,
+            false,
+            std::move( inFullName ),
+            inShortName,
+            std::move( inDescription ) }
+    {
+
+    }
+
+
+    ArgSpecification::ArgSpecification()
+            : ArgSpecification( "dummy", 'd', "" )
+    {
+
     }
 
 
     bool
     cppcmd::ArgSpecification::getIsRequired() const
     {
-        return myIsRequired;
+        return myMinCount > 0;
+    }
+
+
+    int
+    ArgSpecification::getMinCount() const
+    {
+        return myMinCount;
+    }
+
+
+    int
+    ArgSpecification::getMaxCount() const
+    {
+        return myMaxCount;
     }
 
 
