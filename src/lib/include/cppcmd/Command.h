@@ -4,6 +4,7 @@
 
 #include <string>
 #include <vector>
+#include "CommandsOrArgs.h"
 
 namespace cppcmd
 {
@@ -13,7 +14,8 @@ namespace cppcmd
         Command( std::string inName, std::string inDescription );
         [[nodiscard]] const std::string& getName() const;
         [[nodiscard]] const std::string& getDescription() const;
-        [[nodiscard]] const std::vector<Command>& getSubCommands() const;
+        bool getHasSubCommands() const;
+        ArgSpecifications getArgSpecifications() const;
 
     public:
         void addSubCommand( Command inSubcommand );
@@ -21,7 +23,7 @@ namespace cppcmd
     private:
         const std::string myName;
         const std::string myDescription;
-        std::vector<Command> mySubCommands;
+        std::vector<CommandsOrArgs> myCommandsOrArgs;
         void validate();
     };
 }
