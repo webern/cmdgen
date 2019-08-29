@@ -6,12 +6,10 @@ namespace cppcmd
 {
     Config::Config(
             std::string inAppName,
-            std::string inAppDescription,
-            CommandsOrArgs inCommandsOrArgs
+            std::string inAppDescription
     )
             : myAppName( std::move( inAppName ) ),
-              myAppDescription( std::move( inAppDescription ) ),
-              myCommandsOrArgs( std::move( inCommandsOrArgs ) )
+              myAppDescription( std::move( inAppDescription ) )
     {
     }
 
@@ -28,12 +26,4 @@ namespace cppcmd
     {
         return myAppDescription;
     }
-
-
-    const CommandsOrArgs&
-    Config::getCommandsOrArgs() const
-    {
-        return myCommandsOrArgs;
-    }
-
 }
