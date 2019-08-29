@@ -4,10 +4,10 @@
 
 namespace cppcmd
 {
-    class SimpleCommand : Command
+    class NamedLeafCommand : Command
     {
     public:
-        SimpleCommand( ArgSpecifications inArgSpecifications );
+        NamedLeafCommand( std::string inName, std::string inDescription, ArgSpecifications inArgSpecifications );
         [[nodiscard]] CommandType getType() const override;
         [[nodiscard]] std::string getName() const override;
         [[nodiscard]] std::string getDescription() const override;
@@ -15,6 +15,8 @@ namespace cppcmd
         [[nodiscard]] Commands getSubCommands() const override;
 
     private:
-        ArgSpecifications myArgSpecifications;
+        const std::string myName;
+        const std::string myDescription;
+        const ArgSpecifications myArgSpecifications;
     };
 }
