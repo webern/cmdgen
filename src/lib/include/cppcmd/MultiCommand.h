@@ -4,10 +4,11 @@
 
 namespace cppcmd
 {
-    class SimpleCommand : Command
+    class MultiCommand : Command
     {
     public:
-        SimpleCommand( ArgSpecifications inArgSpecifications );
+        MultiCommand( std::string inName, std::string inDescription, Commands&& inSubCommands );
+        MultiCommand( const MultiCommand& other );
         [[nodiscard]] CommandPtr clone() const override;
         [[nodiscard]] CommandType getType() const override;
         [[nodiscard]] std::string getName() const override;
@@ -16,6 +17,8 @@ namespace cppcmd
         [[nodiscard]] Commands getSubCommands() const override;
 
     private:
-        ArgSpecifications myArgSpecifications;
+        const std::string myName;
+        const std::string myDescription;
+        const Commands mySubCommands;
     };
 }

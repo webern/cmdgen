@@ -19,20 +19,8 @@ namespace cppcmd
     {
     public:
         virtual ~Command() = default;
+        [[nodiscard]] virtual CommandPtr clone() const = 0;
         [[nodiscard]] virtual CommandType getType() const = 0;
-
-
-        inline bool getIsNamed()
-        {
-            return hasName( getType() );
-        }
-
-
-        inline bool getIsLeaf()
-        {
-            return canHaveSubCommands( getType() );
-        }
-
 
         // getName is only relevant for named commands, returns an empty string if function is not named
         [[nodiscard]] virtual std::string getName() const = 0;
@@ -45,5 +33,20 @@ namespace cppcmd
 
         // getSubCommands is only relevant for non-leaf commands, an empty vector will be returned if leaf command
         [[nodiscard]] virtual Commands getSubCommands() const = 0;
+
+
+        inline bool getIsNamed()
+        {
+            return hasName( getType() );
+        }
+
+
+        inline bool getIsLeaf()
+        {
+            return canHaveSubCommands( getType() );
+        }
     };
+
+    Commands
+    copyCommands( const Commands& inCommands );
 }

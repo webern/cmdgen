@@ -8,6 +8,7 @@ namespace cppcmd
     {
     public:
         NamedLeafCommand( std::string inName, std::string inDescription, ArgSpecifications inArgSpecifications );
+        [[nodiscard]] CommandPtr clone() const override;
         [[nodiscard]] CommandType getType() const override;
         [[nodiscard]] std::string getName() const override;
         [[nodiscard]] std::string getDescription() const override;

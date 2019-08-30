@@ -8,6 +8,13 @@ namespace cppcmd
     }
 
 
+    CommandPtr
+    SimpleCommand::clone() const
+    {
+        return CommandPtr( new SimpleCommand( getArgSpecifications() ) );
+    }
+
+
     CommandType
     SimpleCommand::getType() const
     {

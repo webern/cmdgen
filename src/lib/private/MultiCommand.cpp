@@ -1,15 +1,15 @@
-#include "cppcmd/NamedLeafCommand.h"
+#include "cppcmd/MultiCommand.h"
 
 namespace cppcmd
 {
-    NamedLeafCommand::NamedLeafCommand(
+    MultiCommand::MultiCommand(
             std::string inName,
             std::string inDescription,
-            ArgSpecifications inArgSpecifications
+            Commands&& inSubCommands
     )
             : myName{ std::move( inName ) },
               myDescription{ std::move( inDescription ) },
-              myArgSpecifications{ std::move( inArgSpecifications ) }
+              mySubCommands{ std::move( inSubCommands ) }
     {
         if( myName.empty() )
         {
@@ -19,44 +19,43 @@ namespace cppcmd
 
 
     CommandPtr
-    NamedLeafCommand::clone() const
+    MultiCommand::clone() const
     {
-        return CommandPtr( new NamedLeafCommand( getName(), getDescription(), getArgSpecifications() ) );
+        return CommandPtr( new MultiCommand( getName(), getDescription(), getSubCommands() ) );
     }
 
 
     CommandType
-    NamedLeafCommand::getType() const
+    MultiCommand::getType() const
     {
         return CommandType::NAMED_LEAF_COMMAND;
     }
 
 
     std::string
-    NamedLeafCommand::getName() const
+    MultiCommand::getName() const
     {
         return myName;
     }
 
 
     std::string
-    NamedLeafCommand::getDescription() const
+    MultiCommand::getDescription() const
     {
         return myDescription;
     }
 
 
     ArgSpecifications
-    NamedLeafCommand::getArgSpecifications() const
+    MultiCommand::getArgSpecifications() const
     {
-        return myArgSpecifications;
+        return ArgSpecifications{};
     }
 
 
     Commands
-    NamedLeafCommand::getSubCommands() const
+    MultiCommand::getSubCommands() const
     {
-        return Commands{};
+        return copyCommands( mySubCommands );
     }
-
 }
