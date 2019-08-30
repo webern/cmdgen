@@ -31,6 +31,8 @@ set_property(TARGET cppcmd PROPERTY CXX_STANDARD 17)
 if (${CPPCMD_ENABLE_EXAMPLE})
     message(STATUS "${DEBUG_INFO} Line:${CMAKE_CURRENT_LIST_LINE} compiling cppcmd_example")
     add_executable(cppcmd_example ${FILES_EXAMPLE_SOURCES})
+    target_include_directories(cppcmd_example PUBLIC "${DIR_CPPCMD_INCLUDE}")
+    target_link_libraries(cppcmd_example cppcmd)
     set_property(TARGET cppcmd_example PROPERTY CXX_STANDARD 17)
 endif ()
 

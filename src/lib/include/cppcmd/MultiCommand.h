@@ -4,11 +4,11 @@
 
 namespace cppcmd
 {
-    class MultiCommand : Command
+    class MultiCommand : public Command
     {
     public:
         MultiCommand( std::string inName, std::string inDescription, Commands&& inSubCommands );
-        MultiCommand( const MultiCommand& other );
+        MultiCommand( MultiCommand&& other ) = default;
         [[nodiscard]] CommandPtr clone() const override;
         [[nodiscard]] CommandType getType() const override;
         [[nodiscard]] std::string getName() const override;

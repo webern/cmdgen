@@ -4,10 +4,11 @@
 
 namespace cppcmd
 {
-    class NamedLeafCommand : Command
+    class NamedLeafCommand : public Command
     {
     public:
         NamedLeafCommand( std::string inName, std::string inDescription, ArgSpecifications inArgSpecifications );
+        NamedLeafCommand( NamedLeafCommand&& other ) = default;
         [[nodiscard]] CommandPtr clone() const override;
         [[nodiscard]] CommandType getType() const override;
         [[nodiscard]] std::string getName() const override;

@@ -4,10 +4,11 @@
 
 namespace cppcmd
 {
-    class SimpleCommand : Command
+    class SimpleCommand : public Command
     {
     public:
-        SimpleCommand( ArgSpecifications inArgSpecifications );
+        explicit SimpleCommand( ArgSpecifications inArgSpecifications );
+        SimpleCommand( SimpleCommand&& other ) = default;
         [[nodiscard]] CommandPtr clone() const override;
         [[nodiscard]] CommandType getType() const override;
         [[nodiscard]] std::string getName() const override;

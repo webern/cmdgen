@@ -6,10 +6,12 @@ namespace cppcmd
 {
     Config::Config(
             std::string inAppName,
-            std::string inAppDescription
+            std::string inAppDescription,
+            Commands&& inCommands
     )
             : myAppName( std::move( inAppName ) ),
-              myAppDescription( std::move( inAppDescription ) )
+              myAppDescription( std::move( inAppDescription ) ),
+              myCommands{ std::move( inCommands ) }
     {
     }
 
