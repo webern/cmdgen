@@ -1,8 +1,8 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
-#include "cppcmd/Config.h"
+#include "cmdgen/Config.h"
 
-namespace cppcmd
+namespace cmdgen
 {
     Config::Config(
             std::string inAppName,

@@ -1,4 +1,4 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
 #pragma once
 
@@ -7,7 +7,7 @@
 #include <unordered_map>
 #include "Typedef.h"
 
-namespace cppcmd
+namespace cmdgen
 {
 
     class ArgVal

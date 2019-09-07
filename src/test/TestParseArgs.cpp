@@ -1,10 +1,10 @@
-// cppcmd by (c) Matthew James Briggs
+// cmdgen by (c) Matthew James Briggs
 
-#include "cppcmd/ParsedArgs.h"
+#include "cmdgen/ParsedArgs.h"
 #include "parseArgs.h"
 #include "catch.hpp"
 
-namespace cppcmd
+namespace cmdgen
 {
     const bool IS_FLAG = true;
     const bool IS_NOT_FLAG = false;

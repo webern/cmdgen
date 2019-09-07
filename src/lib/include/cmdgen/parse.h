@@ -1,12 +1,12 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
 #pragma once
 
-#include "cppcmd/RawArgs.h"
-#include "cppcmd/Config.h"
+#include "cmdgen/RawArgs.h"
+#include "cmdgen/Config.h"
 #include "ParsedArgs.h"
 
-namespace cppcmd
+namespace cmdgen
 {
     const ParsedArgs
     parse( const Config& inConfig, const RawArgs& inRawArgs );

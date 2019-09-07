@@ -1,12 +1,12 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
 #pragma once
 
-#include "cppcmd/Command.h"
+#include "cmdgen/Command.h"
 #include <string>
 #include <vector>
 
-namespace cppcmd
+namespace cmdgen
 {
     class RawArgs
     {

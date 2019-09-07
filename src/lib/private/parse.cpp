@@ -1,7 +1,7 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
-#include "cppcmd/parse.h"
+#include "cmdgen/parse.h"
 
-namespace cppcmd
+namespace cmdgen
 {
 }

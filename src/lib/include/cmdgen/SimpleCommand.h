@@ -2,13 +2,13 @@
 
 #include "Command.h"
 
-namespace cppcmd
+namespace cmdgen
 {
-    class MultiCommand : public Command
+    class SimpleCommand : public Command
     {
     public:
-        MultiCommand( std::string inName, std::string inDescription, Commands&& inSubCommands );
-        MultiCommand( MultiCommand&& other ) = default;
+        explicit SimpleCommand( ArgSpecifications inArgSpecifications );
+        SimpleCommand( SimpleCommand&& other ) = default;
         [[nodiscard]] CommandPtr clone() const override;
         [[nodiscard]] CommandType getType() const override;
         [[nodiscard]] std::string getName() const override;
@@ -17,8 +17,6 @@ namespace cppcmd
         [[nodiscard]] Commands getSubCommands() const override;
 
     private:
-        const std::string myName;
-        const std::string myDescription;
-        const Commands mySubCommands;
+        ArgSpecifications myArgSpecifications;
     };
 }

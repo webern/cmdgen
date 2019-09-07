@@ -1,9 +1,9 @@
-// cppcmd by (c) Matthew James Briggs
+// cmdgen by (c) Matthew James Briggs
 
-#include "cppcmd/RawArgs.h"
+#include "cmdgen/RawArgs.h"
 #include "catch.hpp"
 
-namespace cppcmd
+namespace cmdgen
 {
     TEST_CASE( "RawArgs 1" )
     {

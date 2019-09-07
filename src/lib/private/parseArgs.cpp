@@ -1,12 +1,12 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
 #include <utility>
 #include <sstream>
-#include <cppcmd/RawArgs.h>
-#include "cppcmd/ParsedArgs.h"
+#include <cmdgen/RawArgs.h>
+#include "cmdgen/ParsedArgs.h"
 #include "parseArgs.h"
 
-namespace cppcmd
+namespace cmdgen
 {
 
     enum class POS

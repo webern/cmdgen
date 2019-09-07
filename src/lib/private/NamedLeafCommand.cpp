@@ -1,6 +1,6 @@
-#include "cppcmd/NamedLeafCommand.h"
+#include "cmdgen/NamedLeafCommand.h"
 
-namespace cppcmd
+namespace cmdgen
 {
     NamedLeafCommand::NamedLeafCommand(
             std::string inName,

@@ -1,6 +1,6 @@
-#include "cppcmd/Command.h"
+#include "cmdgen/Command.h"
 
-namespace cppcmd
+namespace cmdgen
 {
     Commands
     copyCommands( const Commands& inCommands )

@@ -1,6 +1,6 @@
-#include "cppcmd/SimpleCommand.h"
+#include "cmdgen/SimpleCommand.h"
 
-namespace cppcmd
+namespace cmdgen
 {
     SimpleCommand::SimpleCommand( ArgSpecifications inArgSpecifications )
             : myArgSpecifications{ std::move( inArgSpecifications ) }

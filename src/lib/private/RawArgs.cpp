@@ -1,8 +1,8 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
-#include "cppcmd/RawArgs.h"
+#include "cmdgen/RawArgs.h"
 
-namespace cppcmd
+namespace cmdgen
 {
 
     RawArgs::RawArgs( int argc, char** argv )

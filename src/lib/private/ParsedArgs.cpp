@@ -1,8 +1,8 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
-#include "cppcmd/ParsedArgs.h"
+#include "cmdgen/ParsedArgs.h"
 
-namespace cppcmd
+namespace cmdgen
 {
     ParsedArgs::ParsedArgs( const ArgSpecifications& inArgSpecifications )
             : myArgMap{ createArgMap( inArgSpecifications ) }

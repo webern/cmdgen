@@ -1,14 +1,14 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
 #pragma once
 
 #include <unordered_map>
-#include "cppcmd/Typedef.h"
-#include "cppcmd/ArgVal.h"
-#include "cppcmd/Config.h"
-#include "cppcmd/Error.h"
+#include "cmdgen/Typedef.h"
+#include "cmdgen/ArgVal.h"
+#include "cmdgen/Config.h"
+#include "cmdgen/Error.h"
 
-namespace cppcmd
+namespace cmdgen
 {
 
     class ParsedArgs

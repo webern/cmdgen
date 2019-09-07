@@ -1,16 +1,16 @@
-// cppcmd by (c) Matthew James Briggs
+// cmdgen by (c) Matthew James Briggs
 
 #include <iostream>
-#include "cppcmd/Command.h"
-#include "cppcmd/MultiCommand.h"
-#include "cppcmd/NamedLeafCommand.h"
-#include "cppcmd/Config.h"
+#include "cmdgen/Command.h"
+#include "cmdgen/MultiCommand.h"
+#include "cmdgen/NamedLeafCommand.h"
+#include "cmdgen/Config.h"
 
 
 int
 main( int argc, char* argv[] )
 {
-    using namespace cppcmd;
+    using namespace cmdgen;
     CommandPtr echo =
             CommandPtr{ new NamedLeafCommand{
                     "foo",
@@ -19,9 +19,9 @@ main( int argc, char* argv[] )
             } };
 
     Config config = Config{
-            "cppcmd_example",
+            "cmdgen_example",
             "an example program",
             std::move( Commands{ std::move( echo ) } ) };
 
-    std::cout << "cppcmd main" << std::endl;
+    std::cout << "cmdgen main" << std::endl;
 }

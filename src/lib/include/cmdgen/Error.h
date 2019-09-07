@@ -1,4 +1,4 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
 #pragma once
 
@@ -7,7 +7,7 @@
 #include "Command.h"
 #include "ArgSpecification.h"
 
-namespace cppcmd
+namespace cmdgen
 {
     struct Error
     {

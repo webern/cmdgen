@@ -1,6 +1,6 @@
-#include "cppcmd/MultiCommand.h"
+#include "cmdgen/MultiCommand.h"
 
-namespace cppcmd
+namespace cmdgen
 {
     MultiCommand::MultiCommand(
             std::string inName,

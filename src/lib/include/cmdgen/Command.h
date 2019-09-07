@@ -1,4 +1,4 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
 #pragma once
 
@@ -8,7 +8,7 @@
 #include "ArgSpecification.h"
 #include "CommantType.h"
 
-namespace cppcmd
+namespace cmdgen
 {
     class Command;
 

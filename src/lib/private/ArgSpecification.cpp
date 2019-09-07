@@ -1,11 +1,11 @@
 
-#include "cppcmd/ArgSpecification.h"
+#include "cmdgen/ArgSpecification.h"
 
 #include <utility>
 
-namespace cppcmd
+namespace cmdgen
 {
-    cppcmd::ArgSpecification::ArgSpecification(
+    cmdgen::ArgSpecification::ArgSpecification(
             int inMinCount,
             int inMaxCount,
             bool inIsFlag,
@@ -50,7 +50,7 @@ namespace cppcmd
 
 
     bool
-    cppcmd::ArgSpecification::getIsRequired() const
+    cmdgen::ArgSpecification::getIsRequired() const
     {
         return myMinCount > 0;
     }
@@ -71,28 +71,28 @@ namespace cppcmd
 
 
     bool
-    cppcmd::ArgSpecification::getIsFlag() const
+    cmdgen::ArgSpecification::getIsFlag() const
     {
         return myIsFlag;
     }
 
 
     const std::string&
-    cppcmd::ArgSpecification::getFullName() const
+    cmdgen::ArgSpecification::getFullName() const
     {
         return myFullName;
     }
 
 
     char
-    cppcmd::ArgSpecification::getShortName() const
+    cmdgen::ArgSpecification::getShortName() const
     {
         return myShortName;
     }
 
 
     const std::string&
-    cppcmd::ArgSpecification::getDescription() const
+    cmdgen::ArgSpecification::getDescription() const
     {
         return myDescription;
     }

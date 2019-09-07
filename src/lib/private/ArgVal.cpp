@@ -1,8 +1,8 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
-#include "cppcmd/ArgVal.h"
+#include "cmdgen/ArgVal.h"
 
-namespace cppcmd
+namespace cmdgen
 {
 
     ArgVal::ArgVal()

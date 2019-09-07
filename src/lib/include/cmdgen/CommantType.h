@@ -1,6 +1,6 @@
 #pragma once
 
-namespace cppcmd
+namespace cmdgen
 {
     enum class CommandType
     {

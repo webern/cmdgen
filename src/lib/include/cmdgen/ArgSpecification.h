@@ -1,12 +1,12 @@
-// cppcmd (c) MatthewJamesBriggs
+// cmdgen (c) MatthewJamesBriggs
 
 #pragma once
 
 #include <string>
 #include <vector>
-#include "cppcmd/Command.h"
+#include "cmdgen/Command.h"
 
-namespace cppcmd
+namespace cmdgen
 {
     class ArgSpecification
     {

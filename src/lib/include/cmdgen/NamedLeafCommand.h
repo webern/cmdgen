@@ -2,7 +2,7 @@
 
 #include "Command.h"
 
-namespace cppcmd
+namespace cmdgen
 {
     class NamedLeafCommand : public Command
     {
