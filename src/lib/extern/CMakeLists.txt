@@ -1,1 +1,1 @@
-# cppcmd by (c) Matthew James Briggs
+# cmdgen by (c) Matthew James Briggs

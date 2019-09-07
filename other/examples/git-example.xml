@@ -1,0 +1,18 @@
+<cmdgen>
+  <program>git</program>
+  <commands>
+    <command>
+      <name>remote</name>
+      <commands>
+        <name>origin</name>
+        <arguments>
+          <unnamed>
+            <min-occurs>1</min-occurs>
+            <max-occurs>1</max-occurs>
+            <type>string</type>
+          </unnamed>
+        </arguments>
+      </commands>
+    </command>
+  </commands>
+</cmdgen>

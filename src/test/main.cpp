@@ -1,4 +1,4 @@
-// cppcmd by (c) Matthew James Briggs
+// cmdgen by (c) Matthew James Briggs
 
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
