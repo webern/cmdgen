@@ -19,10 +19,4 @@ main( int argc, char* argv[] )
 
     const std::string input{ argv[2] };
     std::cout << "parsing " << input << std::endl;
-    auto xdoc = ezxml::XFactory::makeXDoc();
-    xdoc->loadFile( input );
-    std::cout << "whee" << std::endl;
-    xdoc->saveStream( std::cout );
-    const auto root = xdoc->getRoot();
-
 }
