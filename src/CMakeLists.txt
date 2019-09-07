@@ -4,8 +4,8 @@ project(cmdgen LANGUAGES CXX VERSION 0.0.1)
 
 # Variables
 set(DEBUG_INFO "cmdgen/src/CMakeLists.txt")
-set(CORE_LIBRARY_NAME cppgencore)
-set(MAIN_PROGRAM_NAME cppgen)
+set(CORE_LIBRARY_NAME cmdgen_core)
+set(MAIN_PROGRAM_NAME cmdgen)
 set(TEST_PROGRAM_NAME cmdgen_test)
 message(STATUS "${DEBUG_INFO} Line:${CMAKE_CURRENT_LIST_LINE} cmdgen cmake file starting")
 
