@@ -32,12 +32,17 @@ add_library(${CORE_LIBRARY_NAME} "${FILES_CMDGEN_SOURCES}")
 target_include_directories(${CORE_LIBRARY_NAME} PUBLIC "${DIR_CMDGEN_INCLUDE}")
 target_include_directories(${CORE_LIBRARY_NAME} PRIVATE "${DIR_CMDGEN_SOURCES}")
 set_property(TARGET ${CORE_LIBRARY_NAME} PROPERTY CXX_STANDARD 17)
+add_subdirectory(./lib/extern/ezxml)
+target_link_libraries(${CORE_LIBRARY_NAME} ezxml)
+target_include_directories(${CORE_LIBRARY_NAME} PRIVATE ./lib/extern/ezxml/src/include)
+target_include_directories(${CORE_LIBRARY_NAME} PRIVATE ./lib/extern/ezxml/src/private)
 
 # Create main program
 add_executable(${MAIN_PROGRAM_NAME} "${FILES_MAIN_SOURCES}")
 target_include_directories(${MAIN_PROGRAM_NAME} PRIVATE "${DIR_MAIN_INCLUDE}")
 target_include_directories(${MAIN_PROGRAM_NAME} PRIVATE "${DIR_CMDGEN_INCLUDE}")
 target_include_directories(${MAIN_PROGRAM_NAME} PRIVATE "${DIR_CMDGEN_SOURCES}")
+target_include_directories(${MAIN_PROGRAM_NAME} PRIVATE ./lib/extern/ezxml/src/include)
 target_link_libraries(${MAIN_PROGRAM_NAME} ${CORE_LIBRARY_NAME})
 set_property(TARGET ${MAIN_PROGRAM_NAME} PROPERTY CXX_STANDARD 17)
 
