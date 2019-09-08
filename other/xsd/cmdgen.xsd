@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified"
-    targetNamespace="cmdgen" vc:minVersion="1.0" xmlns="cmdgen"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="cx" vc:minVersion="1.0" xmlns="cx"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning">
 
     <xs:simpleType name="st-datatype">
@@ -38,5 +38,26 @@
             </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
-    <xs:element name="cmdgen"/>
+    <xs:element name="cmdgen" type="ct-root"> </xs:element>
+    <xs:complexType name="ct-root">
+        <xs:sequence>
+            <xs:element name="program" type="ct-program"/>
+            <xs:element name="settings"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ct-program">
+        <xs:sequence>
+            <xs:element name="name"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ct-argument">
+        <xs:all maxOccurs="1" minOccurs="1">
+            <xs:element name="name"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="ct-command">
+        <xs:sequence>
+            <xs:element name="name"/>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>
