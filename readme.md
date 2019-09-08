@@ -1,6 +1,9 @@
 cmdgen
 ======
 
+[![CircleCI](https://circleci.com/gh/webern/cmdgen/tree/master.svg?style=svg)](https://circleci.com/gh/webern/cmdgen/tree/master)
+[![CircleCI](https://circleci.com/gh/webern/cmdgen/tree/develop.svg?style=svg)](https://circleci.com/gh/webern/cmdgen/tree/develop)
+
 cmdgen is a command line program which reads a definition of commands and arguments, provided by an xml file, and generates the necessary code to stub out CLI program that takes those commands and arguments.
 
 Commands form a tree-like structure, and should be familiar to most from git. For example this:
