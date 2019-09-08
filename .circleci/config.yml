@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: matthewjamesbriggs/cmake:v001
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: Cmake
+          command: |
+              cd src && cmake -DCMDGEN_ENABLE_TESTS=on .      
+      - run:
+          name: Build
+          command: cd src && make
+
+      - run:
+          name: Run Examples
+          command: echo "no examples yet"
+
+      - run:
+          name: Test
+          command: cd src && ./cmdgen_test
