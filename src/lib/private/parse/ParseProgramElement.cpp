@@ -3,13 +3,13 @@
 
 namespace cmdgen
 {
-    ProgramElement
+    Program
     ParseProgramElement(
             ezxml::XElementIterator iter,
             ezxml::XElementIterator end
     )
     {
-        ProgramElement program{};
+        Program program{};
         for( ; iter != end; ++iter )
         {
             if( iter->getName() == "name" )

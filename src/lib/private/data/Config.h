@@ -5,13 +5,13 @@
 #include <vector>
 #include "Argument.h"
 #include "Command.h"
-#include "ProgramElement.h"
+#include "Program.h"
 
 namespace cmdgen
 {
     struct Config
     {
-        ProgramElement program;
+        Program program;
         std::string description;
         std::vector<Command> commands;
         std::vector<Argument> arguments;

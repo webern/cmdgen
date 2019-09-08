@@ -1,10 +1,12 @@
-FROM debian:9.8
+FROM gcc:9.2
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && \
+    apt-get install -y \
+	wget \
+    curl \
     git \
     ssh \
     tar \
     gzip \
     ca-certificates \
-    cmake \
-    build-essential
+    cmake

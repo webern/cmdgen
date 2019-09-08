@@ -5,7 +5,7 @@
 
 namespace cmdgen
 {
-    struct ProgramElement
+    struct Program
     {
         std::string name;
         std::string description;

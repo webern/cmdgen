@@ -1,6 +1,6 @@
 // cmdgen by (c) Matthew James Briggs
 
-#include "ParseConfigRoot.h"
+#include "parse/ParseConfigRoot.h"
 #include "Path.h"
 #include "catch.hpp"
 #include "ezxml/ezxml.h"
