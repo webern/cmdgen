@@ -8,6 +8,6 @@ namespace cmdgen
     void
     Placeholder::print()
     {
-        std::cout << "hello world" << std::endl;
+        
     }
 }

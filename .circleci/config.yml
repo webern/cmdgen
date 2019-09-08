@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: matthewjamesbriggs/cmake:v001
+      - image: matthewjamesbriggs/cmake:latest
 
     working_directory: ~/repo
 

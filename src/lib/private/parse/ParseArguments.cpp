@@ -11,7 +11,7 @@ namespace cmdgen
     )
     {
         Argument argument;
-        argument.unflagged = isUnflagged;
+        argument.unlabeled = isUnflagged;
         for( ; iter != end; ++iter )
         {
             if( iter->getName() == "name" )
@@ -43,6 +43,14 @@ namespace cmdgen
                 }
                 argument.type = t;
             }
+            else if( iter->getName() == "default" )
+            {
+                argument.defaultValue = iter->getValue();
+            }
+            else if( iter->getName() == "shorthand" )
+            {
+                argument.shorthand = iter->getValue();
+            }
         }
 
         return argument;
@@ -52,7 +60,7 @@ namespace cmdgen
     void
     ParseArguments(
             ezxml::XElementIterator iter,
-            ezxml::XElementIterator end,
+            const ezxml::XElementIterator& end,
             std::vector<Argument>& ioArguments
     )
     {
@@ -62,13 +70,13 @@ namespace cmdgen
             {
                 ioArguments.emplace_back( ParseArgument( iter->begin(), iter->end(), false ) );
             }
-            else if( iter->getName() == "unflagged" )
+            else if( iter->getName() == "unlabeled" )
             {
                 ioArguments.emplace_back( ParseArgument( iter->begin(), iter->end(), true ) );
             }
             else
             {
-                throw std::runtime_error{ "Expected 'unflagged' or 'argument'." };
+                throw std::runtime_error{ "Expected 'unlabeled' or 'argument'." };
             }
         }
     }

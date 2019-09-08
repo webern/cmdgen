@@ -1,4 +1,4 @@
-FROM matthewjamesbriggs/cmake:v001
+FROM matthewjamesbriggs/cmake:v002
 
 ENV BASEDIR="/repo"
 WORKDIR $BASEDIR

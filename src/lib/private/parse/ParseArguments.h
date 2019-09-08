@@ -2,16 +2,15 @@
 #pragma once
 
 #include <vector>
-#include "Argument.h"
-#include "Command.h"
+#include "data/Argument.h"
 #include "ezxml/ezxml.h"
 
 namespace cmdgen
 {
     void
-    ParseCommandsOrArguments(
-            const ezxml::XElementIterator& iter,
-            std::vector<Command>& ioCommands,
+    ParseArguments(
+            ezxml::XElementIterator iter,
+            const ezxml::XElementIterator& end,
             std::vector<Argument>& ioArguments
     );
 }
