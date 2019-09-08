@@ -1,14 +1,17 @@
 <?xml version="1.0"?>
 <!--
-Examples
-
-git remote add origin https://whatever.git
-git remote add upstream https://whatever.git
-git remote remove origin
-git remote remove upstream
+Examples:
+gitt remote add origin https://whatever.git
+gitt remote add upstream https://whatever.git
+gitt remote remove origin
+gitt remote remove upstream
 -->
 <cmdgen>
-    <program>git</program>
+    <program>
+      <name>gitt</name>
+      <description>Some program kind of familiar.</description>
+    </program>
+    <settings/>
     <commands>
         <command>
             <name>remote</name>

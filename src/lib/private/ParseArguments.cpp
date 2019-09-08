@@ -43,6 +43,14 @@ namespace cmdgen
                 }
                 argument.type = t;
             }
+            else if( iter->getName() == "default" )
+            {
+                argument.defaultValue = iter->getValue();
+            }
+            else if( iter->getName() == "shorthand" )
+            {
+                argument.shorthand = iter->getValue();
+            }
         }
 
         return argument;

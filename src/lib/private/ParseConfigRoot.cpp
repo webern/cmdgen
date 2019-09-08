@@ -1,6 +1,7 @@
 // cmdgen by Matthew James Briggs, https://github.com/webern/cmdgen
 #include "ParseConfigRoot.h"
 #include "ParseCommandsOrArguments.h"
+#include "ParseProgramElement.h"
 
 namespace cmdgen
 {
@@ -18,19 +19,26 @@ namespace cmdgen
         {
             throw std::runtime_error{ "The 'cmdgen' element has no children" };
         }
-        if( rootIter->getName() != "program" )
+        if( rootIter->getName() != "program" || rootIter->begin() == rootIter->end() )
         {
-            throw std::runtime_error{ "The first child of 'cmdgen' should be 'program'" };
+            throw std::runtime_error{
+                    "The first child of 'cmdgen' should be 'program' which should have sub-elements such as 'name'."
+            };
         }
         else
         {
-            config.program = rootIter->getValue();
+            config.program = ParseProgramElement( rootIter->begin(), rootIter->end() );
         }
         ++rootIter;
         if( rootIter == rootEnd )
         {
             std::cout << "Nothing to parse here." << std::endl;
             // TODO - is this an error?
+        }
+        if( rootIter->getName() == "settings" )
+        {
+            // TODO - parse settings
+            ++rootIter;
         }
         if( rootIter->getName() != "commands" && rootIter->getName() != "arguments" )
         {

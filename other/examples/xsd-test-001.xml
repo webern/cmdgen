@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<cmdgen xmlns="cx"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="cmdgen ../xsd/cmdgen.xsd">
-    <program>
-        <name>git</name>
-    </program>
-    <settings/>
-</cmdgen>

@@ -16,5 +16,6 @@ namespace cmdgen
         int minOccurs = -1;
         int maxOccurs = -1;
         Type type;
+        std::string defaultValue;
     };
 }
