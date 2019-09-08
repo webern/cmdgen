@@ -10,7 +10,7 @@ namespace cmdgen
     void
     ParseArguments(
             ezxml::XElementIterator iter,
-            ezxml::XElementIterator end,
+            const ezxml::XElementIterator& end,
             std::vector<Argument>& ioArguments
     );
 }

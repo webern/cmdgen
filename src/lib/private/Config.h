@@ -11,6 +11,7 @@ namespace cmdgen
     struct Config
     {
         std::string program;
+        std::string description;
         std::vector<Command> commands;
         std::vector<Argument> arguments;
     };

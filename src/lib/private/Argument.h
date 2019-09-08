@@ -9,7 +9,7 @@ namespace cmdgen
 {
     struct Argument
     {
-        bool unflagged = false;
+        bool unlabeled = false;
         std::string name;
         std::string shorthand;
         std::string description;

@@ -17,29 +17,29 @@ constexpr const char* const xml = R"(
         <command>
           <name>add</name>
           <arguments>
-            <unflagged>
+            <unlabeled>
               <name>remote-name</name>
               <min-occurs>1</min-occurs>
               <max-occurs>1</max-occurs>
               <type>string</type>
-            </unflagged>
-            <unflagged>
+            </unlabeled>
+            <unlabeled>
               <name>remote-uri</name>
               <min-occurs>1</min-occurs>
               <max-occurs>1</max-occurs>
               <type>string</type>
-            </unflagged>
+            </unlabeled>
           </arguments>
         </command>
         <command>
           <name>remove</name>
           <arguments>
-            <unflagged>
+            <unlabeled>
               <name>remote-name</name>
               <min-occurs>1</min-occurs>
               <max-occurs>1</max-occurs>
               <type>string</type>
-            </unflagged>
+            </unlabeled>
           </arguments>
         </command>
       </commands>
