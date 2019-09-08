@@ -1,1 +1,0 @@
-# cppcmd by (c) Matthew James Briggs
