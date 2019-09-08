@@ -1,1 +1,0 @@
-# cmdgen by (c) Matthew James Briggs
