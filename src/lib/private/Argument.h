@@ -3,15 +3,18 @@
 
 #include <string>
 #include <vector>
-#include "Argument.h"
+#include "Type.h"
 
 namespace cmdgen
 {
-    struct Command
+    struct Argument
     {
+        bool unflagged = false;
         std::string name;
+        std::string shorthand;
         std::string description;
-        std::vector<Command> commands;
-        std::vector<Argument> arguments;
+        int minOccurs = -1;
+        int maxOccurs = -1;
+        Type type;
     };
 }

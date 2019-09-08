@@ -4,13 +4,13 @@
 #include <string>
 #include <vector>
 #include "Argument.h"
+#include "Command.h"
 
 namespace cmdgen
 {
-    struct Command
+    struct Config
     {
-        std::string name;
-        std::string description;
+        std::string program;
         std::vector<Command> commands;
         std::vector<Argument> arguments;
     };
