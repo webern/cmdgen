@@ -15,7 +15,7 @@ jobs:
               cd src && cmake -DCMDGEN_ENABLE_TESTS=on .      
       - run:
           name: Build
-          command: make -j 2
+          command: cd src && make
 
       - run:
           name: Run Examples
@@ -24,4 +24,3 @@ jobs:
       - run:
           name: Test
           command: cd src && ./cmdgen_test
-
