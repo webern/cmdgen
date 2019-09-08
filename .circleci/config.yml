@@ -24,3 +24,4 @@ jobs:
       - run:
           name: Test
           command: cd src && ./cmdgen_test
+
