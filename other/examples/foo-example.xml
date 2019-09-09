@@ -8,7 +8,7 @@
         <example>foo die --final-words "goodbye world"</example>
         <example>foo greet -g crimey --times 1000</example>
         <example>foo die</example>
-        <example>foo die --f "bar"</example>
+        <example>foo die -f bar</example>
     </examples>
     </program>
     <settings/>
