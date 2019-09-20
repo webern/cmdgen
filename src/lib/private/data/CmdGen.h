@@ -12,7 +12,6 @@ namespace cmdgen
     struct CmdGen
     {
         Program program;
-        std::string description;
         std::vector<Command> commands;
         std::vector<Argument> arguments;
     };
