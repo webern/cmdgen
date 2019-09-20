@@ -11,6 +11,7 @@ namespace cmdgen
     {
         std::string name;
         std::string description;
+        std::vector<std::string> examples;
         std::vector<Command> commands;
         std::vector<Argument> arguments;
     };

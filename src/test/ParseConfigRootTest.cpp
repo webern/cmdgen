@@ -8,7 +8,7 @@
 
 namespace
 {
-    cmdgen::Config
+    cmdgen::CmdGen
     load( const std::string& inFilename )
     {
         auto xdoc = ezxml::XFactory::makeXDoc();

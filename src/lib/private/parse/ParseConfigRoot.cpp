@@ -5,10 +5,10 @@
 
 namespace cmdgen
 {
-    Config
+    CmdGen
     ParseConfigRoot( const ezxml::XElementPtr& root )
     {
-        Config config;
+        CmdGen config;
         if( root->getName() != "cmdgen" )
         {
             throw std::runtime_error{ "The root element should be 'cmdgen'" };

@@ -9,7 +9,7 @@
 
 namespace cmdgen
 {
-    struct Config
+    struct CmdGen
     {
         Program program;
         std::string description;

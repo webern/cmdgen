@@ -9,5 +9,6 @@ namespace cmdgen
     {
         std::string name;
         std::string description;
+        std::vector<std::string> examples;
     };
 }
